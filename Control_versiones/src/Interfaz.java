@@ -64,6 +64,11 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         jButton2.setText("Vocales");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Cadenas Inversas");
 
@@ -167,6 +172,54 @@ public class Interfaz extends javax.swing.JFrame {
     jTextField3.setText("");
     jTextField4.setText("");
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+            String p1;
+            
+            boolean a1=false;
+            boolean a2=false;
+            boolean a3=false;
+            boolean a4=false;
+            boolean a5=false;
+            
+            p1 = jTextField1.getText();
+            
+            for(int x=0;x<p1.length();x++){
+                
+                if((p1.charAt(x)=='a')||(p1.charAt(x)=='á') || (p1.charAt(x)=='A')
+                   || (p1.charAt(x)=='Á')){
+                    a1=true;
+                }
+                
+                if((p1.charAt(x)=='e')||(p1.charAt(x)=='é') || (p1.charAt(x)=='E')
+                   || (p1.charAt(x)=='É')){
+                    a2=true;
+                }
+                
+                if((p1.charAt(x)=='i')||(p1.charAt(x)=='í') || (p1.charAt(x)=='I')
+                   || (p1.charAt(x)=='Í')){
+                    a3=true;
+                }
+                
+                if((p1.charAt(x)=='o')||(p1.charAt(x)=='ó') || (p1.charAt(x)=='O')
+                   || (p1.charAt(x)=='Ó')){
+                    a4=true;
+                }
+                
+                if((p1.charAt(x)=='u')||(p1.charAt(x)=='ú') || (p1.charAt(x)=='U')
+                   || (p1.charAt(x)=='Ú')){
+                    a5=true;
+                }
+                
+            }
+            
+            if(a1 && a2 && a3 && a4 && a5){
+                 jTextField4.setText("Cumple");
+            } else {
+                 jTextField4.setText("No Cumple");
+            }
+            
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
