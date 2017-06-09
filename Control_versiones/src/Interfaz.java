@@ -71,6 +71,11 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         jButton3.setText("Cadenas Inversas");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Regla de 3");
 
@@ -220,6 +225,20 @@ public class Interfaz extends javax.swing.JFrame {
             }
             
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String p1,p2;
+        p1 = jTextField1.getText();
+        p2 = jTextField2.getText();
+        
+        StringBuffer p11 = new StringBuffer(p1);
+        p11 = p11.reverse();
+        
+        StringBuffer p22 = new StringBuffer(p2);
+        p22 = p22.reverse();
+        
+          jTextField4.setText(p11 + " " + p22);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
