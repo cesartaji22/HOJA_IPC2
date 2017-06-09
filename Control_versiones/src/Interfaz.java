@@ -78,6 +78,11 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         jButton4.setText("Regla de 3");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("Resultado");
@@ -239,6 +244,20 @@ public class Interfaz extends javax.swing.JFrame {
         
           jTextField4.setText(p11 + " " + p22);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        double a,b,c,d;
+        a=b=c=0;
+        a= Integer.parseInt(jTextField1.getText());
+        b= Integer.parseInt(jTextField2.getText());
+        c= Integer.parseInt(jTextField3.getText());
+        
+        d= c*b;
+        d= d/a;
+        
+        jTextField4.setText(d+ "");
+                
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
