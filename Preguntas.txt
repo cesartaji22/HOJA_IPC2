@@ -1,7 +1,6 @@
 Alumno: César Arnoldo Tajiboy Orozco
 Carne: 201325661
 
-
 1. ¿Qué entiende como "commit"?
     El commit es la función que permite al usuario 
     actualizar el proyecto cada vez que se realice 
